@@ -1,0 +1,1 @@
+<view class="icon-container"><image class="icon-style" src="{{getRankingBg}}"></image><text class="{{['icon-text',(index<=3)?'icon-while':'']}}">{{index}}</text></view>

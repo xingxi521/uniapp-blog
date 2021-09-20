@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "hot-list-icon": "/components/HotListIcon/HotListIcon"
+  },
+  "component": true
+}

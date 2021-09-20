@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "empty-data": "/components/EmptyData/EmptyData",
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "search-result-item": "/components/SearchResultItem/SearchResultItem"
+  },
+  "component": true
+}

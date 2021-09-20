@@ -1,0 +1,23 @@
+/**
+ * 这里是共用样式的定义位置
+ */
+
+.line-clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.card {
+	border: 1px solid #f9f9f9;
+	margin: 12px;
+	padding: 12px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px 1px rgba(143, 143, 143, 0.1);
+}

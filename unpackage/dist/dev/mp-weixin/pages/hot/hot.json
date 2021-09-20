@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "search": "/components/Search/Search",
+    "tabs": "/components/Tabs/Tabs",
+    "uni-load-more": "/uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "hot-list": "/components/HotList/HotList"
+  }
+}

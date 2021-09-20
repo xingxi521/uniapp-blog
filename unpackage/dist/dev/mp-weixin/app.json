@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/hot/hot",
+    "pages/hot-video/hot-video",
+    "pages/my/my"
+  ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "pages/SearchBlog/SearchBlog"
+      ],
+      "name": "sub-1"
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "selectedColor": "#F94D2A",
+    "list": [
+      {
+        "pagePath": "pages/hot/hot",
+        "text": "热搜",
+        "iconPath": "static/tab-icons/hot.png",
+        "selectedIconPath": "static/tab-icons/hot-active.png"
+      },
+      {
+        "pagePath": "pages/hot-video/hot-video",
+        "text": "热播",
+        "iconPath": "static/tab-icons/hot-video.png",
+        "selectedIconPath": "static/tab-icons/hot-video-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/tab-icons/my.png",
+        "selectedIconPath": "static/tab-icons/my-active.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

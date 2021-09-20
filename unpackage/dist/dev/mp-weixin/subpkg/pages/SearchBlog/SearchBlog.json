@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "文章热搜",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "search": "/components/Search/Search",
+    "search-list": "/components/SearchList/SearchList",
+    "search-history": "/components/SearchHistory/SearchHistory",
+    "search-result": "/components/SearchResult/SearchResult"
+  }
+}

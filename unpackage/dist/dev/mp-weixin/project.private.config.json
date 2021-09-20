@@ -1,0 +1,23 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "subpkg/pages/SearchBlog/SearchBlog",
+          "pathName": "subpkg/pages/SearchBlog/SearchBlog",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
