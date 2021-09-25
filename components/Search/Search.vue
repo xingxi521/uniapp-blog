@@ -17,8 +17,8 @@
 			<uni-icons slot="searchIcon" color="#999999" type="search" />
 		  <uni-icons slot="clearIcon" color="#999999" type="clear" />
 		</uni-search-bar>
-		<view v-else class="search_box">
-			<image class="search-icon" src="@/static/images/search.png"></image>
+		<view v-else class="search_box" :style="{backgroundColor: config.backgroundColor, height: config.height, border: config.border}">
+			<image class="search-icon" :src="config.icon"></image>
 			<text class="placeholder-text">{{ placeHolder }}</text>
 		</view>
 	</view>
@@ -43,7 +43,11 @@
 				default: () => {
 					return {
 						backgroundColor: '#F8F8F8',
-						type: 'clear'
+						type: 'clear',
+						icon: '/static/images/search.png',
+						height: '36px',
+						textColor: '#454545',
+						border: '1px solid #c9c9c9'
 					}
 				}
 			},

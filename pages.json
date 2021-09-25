@@ -65,6 +65,13 @@
 							"navigationBarTitleText": "文章热搜",
 							"enablePullDownRefresh": false
 						}
+					},
+					{
+						"path" : "pages/ArticleDetails/ArticleDetails",
+						"style" : {
+								"navigationBarTitleText": "文章详情",
+								"enablePullDownRefresh": false
+						}
 					}
 				]
 			}

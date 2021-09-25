@@ -1,5 +1,5 @@
 <template>
-	<view class="list-container">
+	<view class="list-container" @click="gotoDetailsHandler(item)">
 		<view class="list-box">
 			<view class="list-box-left">
 				<HotListIcon :index="index" />
@@ -40,10 +40,13 @@
 				default: 1
 			}
 		},
-		data() {
-			return {
-				
-			};
+		methods: {
+			// 跳转到文章详情页
+			gotoDetailsHandler(item) {
+				uni.navigateTo({
+					url: `/subpkg/pages/ArticleDetails/ArticleDetails?author=${item.user_name}&articleId=${item.id}`
+				})
+			}
 		}
 	}
 </script>

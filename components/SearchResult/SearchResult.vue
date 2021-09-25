@@ -4,7 +4,7 @@
 		<EmptyData v-if="isEmpty"/>
 		<!-- 有内容显示 -->
 		<mescroll-body v-else ref="mescrollRef" @init="mescrollInit" @down="downCallback" @up="upCallback">
-			<view v-for="(item, index) in searchData" :key="index" class="result-box">
+			<view v-for="(item, index) in searchData" :key="index" class="result-box" @click="gotoDetailsHandler(item)">
 				<SearchResultItem :data="item"/>
 			</view>
 		</mescroll-body>
@@ -86,6 +86,12 @@
 				this.currentPage += 1
 				await this.getSearchResultListRequest()
 				this.mescroll.endSuccess()
+			},
+			// 跳转到文章详情页
+			gotoDetailsHandler(item) {
+				uni.navigateTo({
+					url: `/subpkg/pages/ArticleDetails/ArticleDetails?author=${item.author}&articleId=${item.id}`
+				})
 			}
 		}
 	}

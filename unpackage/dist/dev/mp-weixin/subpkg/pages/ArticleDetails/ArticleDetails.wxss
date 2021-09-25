@@ -1,0 +1,683 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page {
+  font-size: 52px;
+}
+page {
+  font-size: 16px;
+}
+.markdown_views {
+  font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun;
+  font-size: 16px;
+  width: 710rpx;
+  overflow-x: hidden;
+}
+.markdown_views .p-cls {
+  font-size: 0.32rem;
+  color: #4f4f4f;
+  font-weight: normal;
+  line-height: 0.52rem;
+  margin: 0 0 0.32rem 0;
+}
+.markdown_views .strong-cls {
+  font-weight: bold;
+}
+.markdown_views ._i,
+._cite,
+._em,
+._var,
+._address,
+._dfn {
+  font-style: italic;
+}
+#content_views.night .h1-cls,
+#content_views.night .h2-cls,
+#content_views.night .h3-cls,
+#content_views.night .h4-cls,
+#content_views.night .h5-cls,
+#content_views.night .h6-cls {
+  color: #4f4f4f;
+  margin-top: 0 !important;
+  font-weight: bold;
+}
+.markdown_views .ul-cls,
+.markdown_views .ol-cls {
+  margin: 0 0 0.48rem 0;
+  padding: 0;
+}
+.markdown_views .ul-cls .ol-cls {
+  margin: 0 0 0.48rem 0.64rem;
+}
+.markdown_views .ul-cls .li-cls {
+  list-style-type: disc;
+  margin: 0.16rem 0 0 0.64rem;
+}
+.markdown_views .ol-cls .li-cls {
+  list-style-type: decimal;
+  margin-left: 0.8rem;
+  margin-top: 0.16rem;
+}
+.markdown_views .img-cls {
+  max-width: 100%;
+  vertical-align: baseline;
+}
+page .htmledit_views .h1-cls,
+page .markdown_views .h1-cls {
+  font-size: 0.4rem;
+  line-height: 0.6rem;
+}
+page .htmledit_views .h2-cls,
+page .markdown_views .h2-cls {
+  font-size: 0.38rem;
+  line-height: 0.6rem;
+}
+page .htmledit_views .h3-cls,
+page .markdown_views .h3-cls {
+  font-size: 0.36rem;
+  line-height: 0.6rem;
+}
+page .htmledit_views .h4-cls,
+page .markdown_views .h4-cls {
+  font-size: 0.34rem;
+  line-height: 0.54rem;
+}
+page .htmledit_views .h5-cls,
+page .markdown_views .h5-cls {
+  font-size: 0.32rem;
+  line-height: 0.54rem;
+}
+page .htmledit_views .h6-cls,
+page .markdown_views .h6-cls {
+  font-size: 0.3rem;
+  line-height: 0.54rem;
+}
+.markdown_views .h1-cls .code-cls {
+  font-size: 0.56rem;
+}
+.markdown_views .h2-cls .code-cls {
+  font-size: 0.48rem;
+}
+.markdown_views .h3-cls .code-cls {
+  font-size: 0.44rem;
+}
+.markdown_views .h4-cls .code-cls {
+  font-size: 0.4rem;
+}
+.markdown_views .h5-cls .code-cls {
+  font-size: 0.36rem;
+}
+.markdown_views .h6-cls .code-cls {
+  font-size: 0.32rem;
+}
+.markdown_views .blockquote-cls {
+  display: block;
+  padding: 0.32rem;
+  margin: 0 0 0.48rem 0;
+  border-left: 0.16rem solid #dddfe4;
+  background: #eef0f4;
+  overflow: auto;
+  overflow-scrolling: touch;
+  word-wrap: break-word;
+}
+.markdown_views .blockquote-cls .ul-cls,
+.markdown_views .blockquote-cls .ol-cls {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 0.28rem;
+  line-height: 0.44rem;
+}
+.markdown_views .blockquote-cls .ul-cls .li-cls {
+  margin-bottom: 0;
+}
+.markdown_views .blockquote-cls .ol-cls .li-cls {
+  margin-bottom: 0;
+}
+.markdown_views .blockquote-cls ._p {
+  font-size: 0.28rem;
+  line-height: 0.44rem;
+  color: #999;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.markdown_views .hr-cls {
+  margin: 0.48rem 0;
+  border: none;
+  border-bottom: solid #ddd 0.02rem;
+}
+.markdown_views ._tbody {
+  border: 0;
+}
+.markdown_views .table-cls .tr-cls {
+  border: 0;
+  border-top: 0.02rem solid #ddd;
+  background-color: #fff;
+}
+.table-box {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.markdown_views .table-cls {
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 0.48rem;
+}
+.markdown_views ._tbody {
+  border: 0;
+}
+.markdown_views .table-cls .tr-cls:nth-child(2n) {
+  background-color: #f7f7f7;
+}
+.markdown_views .table-cls .tr-cls .th-cls,
+.markdown_views .table-cls .tr-cls .td-cls {
+  font-size: 0.24rem !important;
+  color: #4f4f4f;
+  line-height: 0.44rem;
+  border: 0.02rem solid #ddd;
+  padding: 0.16rem 0.16rem;
+  text-align: left;
+  word-break: normal;
+  vertical-align: middle;
+}
+.markdown_views .table-cls .tr-cls .th-cls .code-cls,
+.markdown_views .table-cls .tr-cls .td-cls .code-cls {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.markdown_views .table-cls .tr-cls .th-cls {
+  font-weight: bold;
+  background-color: #eff3f5;
+}
+.markdown_views .dl-cls {
+  margin: 0.48rem;
+}
+.markdown_views .dl-cls .dt-cls {
+  margin: 0.16rem;
+  font-weight: bold;
+}
+.markdown_views .dl-cls .dt-cls .dd-cls {
+  margin: 0.16rem;
+}
+.markdown_views ._abbr[title],
+.markdown_views ._abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 0.02rem dotted #999;
+}
+.markdown_views .initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+.markdown_views .pre-cls {
+  margin-bottom: 0.48rem;
+  background-color: #282c34;
+  color: #fff;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 4px 8px;
+}
+.markdown_views .a-cls {
+  color: #4ea1db;
+  text-decoration: none;
+}
+.markdown_views .a-cls:hover,
+.markdown_views .a-cls:focus {
+  color: #ca0c16;
+}
+.markdown_views .a-cls:visited {
+  color: #6795b5;
+}
+.markdown_views .footnote {
+  vertical-align: top;
+  position: relative;
+  top: -0.08rem;
+  font-size: 0.24rem;
+}
+.markdown_views .footnotes .ol-cls .li-cls {
+  font-size: 0.28rem;
+  line-height: 0.44rem;
+  margin: 0 0 0.16rem 0.48rem;
+}
+.markdown_views .sequence-diagram,
+.markdown_views .flow-chart {
+  text-align: center;
+  margin-bottom: 0.48rem;
+}
+.markdown_views .sequence-diagram,
+.markdown_views .flow-chart {
+  text-align: center;
+  margin-bottom: 0.48rem;
+  font-size: 0.28rem !important;
+}
+.markdown_views .sequence-diagram [fill='#000'],
+.markdown_views .flow-chart [fill='#000'],
+.markdown_views .sequence-diagram [fill='#000000'],
+.markdown_views .flow-chart [fill='#000000'],
+.markdown_views .sequence-diagram [fill='black'],
+.markdown_views .flow-chart [fill='black'] {
+  fill: #4f4f4f;
+}
+.markdown_views .sequence-diagram [stroke='#000000'],
+.markdown_views .flow-chart [stroke='#000000'] {
+  stroke: #4f4f4f;
+}
+.markdown_views .MathJax_SVG_Display {
+  text-align: center;
+  margin: 0.48rem 0;
+  font-size: 0.36rem;
+  font-weight: 400;
+  color: #4f4f4f;
+  position: relative;
+  text-indent: 0;
+  max-width: none;
+  max-height: none;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+}
+.markdown_views .toc {
+  font-size: 0.32rem;
+  line-height: 0.48rem;
+  margin: 0 0 0.48rem 0;
+  padding: 0;
+}
+.markdown_views .toc .ul-cls {
+  margin: 0 0 0.16rem 0;
+  padding: 0;
+}
+.markdown_views .toc .ul-cls .li-cls {
+  list-style-type: none;
+  margin: 0.16rem 0 0 0.48rem;
+}
+.markdown_views .pre-numbering .li-cls {
+  padding: 0 0.16rem;
+  list-style: none;
+  margin: 0;
+}
+.markdown_views .dl-cls .dd-cls {
+  margin: 0 0 0.16rem 0.8rem;
+}
+.markdown_views .kbd-cls {
+  padding: 0.04rem 0.16rem;
+  border: 0.02rem solid rgba(63, 63, 63, 0.25);
+  box-shadow: 0 0.02rem 0 rgba(63, 63, 63, 0.25);
+  background-color: #fff;
+  color: #333;
+  border-radius: 0.08rem;
+  display: inline-block;
+  margin: 0 0.04rem;
+  white-space: nowrap;
+}
+.markdown_views ._mark {
+  color: #555963;
+}
+.markdown_views .katex-display,
+.markdown_views .MathJax_Display {
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.markdown_views .pre-cls .code-cls {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  overflow-x: auto;
+  padding: 0 !important;
+  color: #000;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal !important;
+  background-color: #f6f8fa;
+  border-radius: 4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+.markdown_views .pre-cls .code-cls {
+    min-width: 94%;
+}
+}
+.markdown_views .pre-cls.prettyprint,
+.markdown_views .prettyprint {
+  margin: 0 0 24px 0;
+  padding: 8px 16px 6px 56px;
+  background-color: #f6f8fa;
+  border: none;
+}
+.prettyprint {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.markdown_views .prettyprint .pre-numbering {
+  position: absolute;
+  width: 48px;
+  background-color: #eef0f4;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 10px 0 8px;
+  list-style: none;
+  text-align: right;
+}
+.markdown_views .pre-numbering .li-cls {
+  padding: 0 8px;
+  list-style: none;
+  margin: 0;
+}
+.markdown_views.prism-atom-one-dark .pre-cls .code-cls {
+  background-color: #282c34;
+  color: #abb2bf;
+}
+.markdown_views.prism-atom-one-dark .prettyprint,
+.markdown_views.prism-atom-one-dark .pre-cls.prettyprint {
+  background-color: #282c34;
+}
+.markdown_views.prism-atom-one-dark .prettyprint .pre-numbering {
+  background-color: #282c34;
+}
+.markdown_views.prism-atom-one-dark .pre-numbering .li-cls {
+  color: #abb2bf !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-atom-one-light .pre-cls .code-cls {
+  background-color: #fafafa;
+}
+.markdown_views.prism-atom-one-light .prettyprint,
+.markdown_views.prism-atom-one-light .pre-cls.prettyprint {
+  background-color: #fafafa;
+}
+.markdown_views.prism-atom-one-light .prettyprint .pre-numbering {
+  background-color: #fafafa;
+}
+.markdown_views.prism-atom-one-light .pre-numbering .li-cls {
+  color: #383a42 !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-tomorrow-night .pre-cls .code-cls {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+.markdown_views.prism-tomorrow-night .prettyprint,
+.markdown_views.prism-tomorrow-night .pre-cls.prettyprint {
+  background-color: #1d1f21;
+}
+.markdown_views.prism-tomorrow-night .prettyprint .pre-numbering {
+  background-color: #1d1f21;
+}
+.markdown_views.prism-tomorrow-night .pre-numbering .li-cls {
+  color: #c5c8c6 !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-dracula .pre-cls .code-cls {
+  background-color: #282a36;
+  color: #f8f8f2;
+}
+.markdown_views.prism-dracula .prettyprint,
+.markdown_views.prism-dracula .pre-cls.prettyprint {
+  background-color: #282a36;
+}
+.markdown_views.prism-dracula .prettyprint .pre-numbering {
+  background-color: #282a36;
+}
+.markdown_views.prism-dracula .pre-numbering .li-cls {
+  color: #f8f8f2 !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-github-gist .pre-cls .code-cls {
+  background-color: #f3f4f5;
+}
+.markdown_views.prism-github-gist .prettyprint,
+.markdown_views.prism-github-gist .pre-cls.prettyprint {
+  background-color: #f3f4f5;
+}
+.markdown_views.prism-github-gist .prettyprint .pre-numbering {
+  background-color: #f3f4f5;
+}
+.markdown_views.prism-github-gist .prettyprint .prism {
+  background-color: #f3f4f5;
+}
+.markdown_views.prism-github-gist .pre-numbering .li-cls {
+  color: #5e6687 !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-kimbie-light .pre-cls .code-cls {
+  background-color: #fbebd4;
+}
+.markdown_views.prism-kimbie-light .prettyprint,
+.markdown_views.prism-kimbie-light .pre-cls.prettyprint {
+  background-color: #fbebd4;
+}
+.markdown_views.prism-kimbie-light .prettyprint .pre-numbering {
+  background-color: #fbebd4;
+}
+.markdown_views.prism-kimbie-light .pre-numbering .li-cls {
+  color: #84613d !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-tomorrow-night-eighties .pre-cls .code-cls {
+  background-color: #2d2d2d;
+  color: #ccc;
+}
+.markdown_views.prism-tomorrow-night-eighties .prettyprint,
+.markdown_views.prism-tomorrow-night-eighties .pre-cls.prettyprint {
+  background-color: #2d2d2d;
+}
+.markdown_views.prism-tomorrow-night-eighties .prettyprint .pre-numbering {
+  background-color: #2d2d2d;
+}
+.markdown_views.prism-tomorrow-night-eighties .pre-numbering .li-cls {
+  color: #ccc !important;
+  border-right: 1px solid #c5c5c5;
+}
+.markdown_views.prism-atelier-sulphurpool-light .pre-cls .code-cls {
+  background-color: #f5f7ff;
+}
+.markdown_views.prism-atelier-sulphurpool-light .prettyprint,
+.markdown_views.prism-atelier-sulphurpool-light .pre-cls.prettyprint {
+  background-color: #f5f7ff;
+}
+.markdown_views.prism-atelier-sulphurpool-light .prettyprint .pre-numbering {
+  background-color: #f5f7ff;
+}
+.markdown_views.prism-atelier-sulphurpool-light .pre-numbering .li-cls {
+  color: #5e6687 !important;
+  border-right: 1px solid #c5c5c5;
+}
+page page.night-body,
+.night {
+  background-color: #2a2d33;
+}
+page page.night-body .img-cls.mathcode {
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+.night .h1-cls,
+.night .h2-cls,
+.night .h3-cls,
+.night .h4-cls,
+.night .h5-cls,
+.night .h6-cls,
+.night ._p,
+.night ._p ._span,
+.night .li-cls,
+.night .dl-cls,
+.night .dt-cls,
+.night .dd-cls,
+.night .strong-cls,
+.night .table-cls,
+.night .table-cls .tr-cls,
+.night .table-cls .tr-cls .th-cls,
+.night .table-cls .tr-cls .td-cls,
+.night .table-cls .tr-cls:nth-child(2n) {
+  color: #dadfe8 !important;
+}
+.night .p-cls,
+.night .strong-cls,
+.night .h1-cls,
+.night .h2-cls,
+.night .h3-cls,
+.night .h4-cls,
+.night .h5-cls,
+.night .h6-cls,
+.night .ol-cls .li-cls,
+.night .ul-cls .li-cls {
+  background-color: #2a2d33 !important;
+}
+.night .code-cls .ol-cls,
+.night .code-cls .ul-cls,
+.night .prettyprint .li-cls {
+  color: #888e99 !important;
+}
+.night .blockquote-cls .p-cls,
+.night .blockquote-cls {
+  background-color: #25272b !important;
+}
+.night .blockquote-cls {
+  border-left: 4px solid #34373d;
+}
+.night .blockquote-cls .p-cls {
+  color: #888e99;
+}
+.night .code-cls .ol-cls .li-cls ._div.hljs-ln-numbers {
+  border-right-style: none;
+}
+.night .prettyprint .pre-numbering,
+.night .prettyprint .pre-numbering .li-cls,
+.night .code-cls .ol-cls .li-cls ._div.hljs-ln-numbers .hljs-ln-line {
+  background: #34373d !important;
+}
+.night .prettyprint .pre-numbering,
+.night .prettyprint .pre-numbering .li-cls {
+  border-right-style: none;
+}
+.night .code-cls .ol-cls,
+.night .code-cls .ul-cls {
+  padding-left: 0;
+  background-color: #25272b;
+}
+.night .table-cls .tr-cls,
+.night .table-cls .tr-cls .th-cls,
+.night .table-cls .tr-cls:nth-child(2n) {
+  background-color: #2a2d33;
+}
+.night .table-cls .tr-cls,
+.night .table-cls .tr-cls .th-cls,
+.night .table-cls .tr-cls .td-cls,
+.night .table-cls .tr-cls:nth-child(2n) {
+  border: 1px solid #555963 !important;
+}
+.night .hljs {
+  padding: 0;
+}
+.article_content.night {
+  background-color: #2a2d33;
+}
+.night .pre-cls .code-cls {
+  color: #fff;
+  background-color: #25272b !important;
+}
+.night .hljs,
+.night .pre-cls.prettyprint,
+.night .pre-cls {
+  background-color: #25272b;
+}
+.night svg {
+  background-color: #fff;
+}
+.night .prettyprint .prism,
+.night .prettyprint ._div[style] {
+  background-color: #25272b !important;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+.night .prettyprint .prism .token.comment {
+  color: #999aaa;
+}
+.night .pre-cls .code-cls .ol-cls .li-cls {
+  background-color: #25272b !important;
+}
+.night .markdown_views .code-cls {
+  background-color: transparent;
+}
+.night .markdown_views .hr-cls {
+  border-bottom-color: #555963 !important;
+}
+.night .markdown_views .prettyprint .pre-numbering {
+  top: 0;
+}
+.night .markdown_views .pre-cls.prettyprint,
+.night .markdown_views .prettyprint {
+  padding: 0 16px 6px 50px;
+}
+.night .markdown_views ._mark {
+  color: #2a2d33;
+}
+.mermaid {
+  line-height: initial;
+}
+.mermaid ._span.edgeLabel {
+  font-size: inherit !important;
+}
+.details-main {
+  padding: 8px 10px;
+  padding-bottom: 108px;
+}
+.details-main .details-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.details-main .info-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 8px 0;
+}
+.details-main .info-box .info-box-left .author-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.details-main .info-box .info-box-left .author-box .author-container {
+  margin-left: 5px;
+}
+.details-main .info-box .info-box-left .author-box .author-container .author-name {
+  font-size: 14px;
+  font-weight: bolder;
+  color: #333;
+  font-size: 14px;
+}
+.details-main .info-box .info-box-left .author-box .author-container .author-time {
+  font-size: 12px;
+  color: #999;
+}
+

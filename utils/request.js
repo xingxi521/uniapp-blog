@@ -20,6 +20,9 @@ function request({ url, method, data }) {
 			},
 			fail: (error) => {
 				reject(error)
+			},
+			complete() {
+				uni.hideLoading()
 			}
 		})
 	})

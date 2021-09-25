@@ -17,3 +17,21 @@ export function getHotList(type) {
 		}
 	})
 }
+
+// 获取文章详情数据
+export function getArticleDetails(data) {
+	return request({
+		url: '/article/details',
+		method: 'get',
+		data
+	})
+}
+
+// 获取文章评论数据
+export function getCommentList(data) {
+	return request({
+		url: '/article/comment/list',
+		method: 'get',
+		data
+	})
+}

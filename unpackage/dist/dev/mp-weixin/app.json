@@ -8,7 +8,8 @@
     {
       "root": "subpkg",
       "pages": [
-        "pages/SearchBlog/SearchBlog"
+        "pages/SearchBlog/SearchBlog",
+        "pages/ArticleDetails/ArticleDetails"
       ],
       "name": "sub-1"
     }
