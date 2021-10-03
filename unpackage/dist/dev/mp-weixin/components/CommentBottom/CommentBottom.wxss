@@ -31,33 +31,18 @@
   right: 0;
   background-color: #ffffff;
   padding: 4px 6px 32px 6px;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
 .comment-bottom-main .comment-btn.data-v-63b53a4c {
   padding-top: 5px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 .comment-bottom-main .praise.data-v-63b53a4c {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
 }
 .comment-bottom-main .praise .praise-img.data-v-63b53a4c {
   width: 26px;
@@ -67,19 +52,10 @@
   font-size: 12px;
 }
 .comment-bottom-main .collect.data-v-63b53a4c {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-          flex-grow: 1;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
 }
 .comment-bottom-main .collect .collect-img.data-v-63b53a4c {
   width: 26px;

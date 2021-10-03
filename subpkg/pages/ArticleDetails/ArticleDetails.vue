@@ -20,7 +20,7 @@
 						</view>
 					</view>
 					<view class="info-box-right">
-						<button type="default" size="mini">关注</button>
+						<button :type="articleData.isFollow ? 'primary' : 'default'" size="mini" @click="followHandler" :loading="followLoading">{{ articleData.isFollow ? '已关注' : '关注' }}</button>
 					</view>
 				</view>
 				<!-- 文章主内容 -->
@@ -28,7 +28,12 @@
 				<!-- 评论数据 -->
 				<CommentList ref="mescrollItem" :articleId="articleId"/>
 			</block>
-			<CommentBottom />
+			<!-- 底部功能栏 -->
+			<CommentBottom :articleData="articleData" @onComment="onComment" @onPraise="onPraise" @onCollect="onCollect"/>
+			<!-- 评论弹出层 -->
+			<uni-popup ref="popup" type="bottom" @change="popChangeHandler">
+				<CommentPopUp v-if="showPopUp" :articleId="articleId" @onSend="onSendHandler"/>
+			</uni-popup>
 		</view>
 	</page-meta>
 </template>
@@ -37,6 +42,8 @@
 	import MescrollCompMixin from '@/uni_modules/mescroll-uni/components/mescroll-uni/mixins/mescroll-comp.js'
 	import mpHtml from '@/uni_modules/mp-html/components/mp-html/mp-html'
 	import { getArticleDetails } from '@/api/hot/index.js'
+	import { follow, praise, collect } from '@/api/searchblog/index.js'
+	import { mapActions } from 'vuex'
 	export default {
 		mixins: [MescrollCompMixin],
 		components: {
@@ -47,14 +54,22 @@
 				// 文章数据
 				articleData: null,
 				// 文章ID
-				articleId: null
+				articleId: null,
+				// 文章作者
+				author: '',
+				// 关注按钮加载状态
+				followLoading: false,
+				// 评论弹出层显示
+				showPopUp: false
 			};
 		},
 		onLoad({ author, articleId }) {
 			this.articleId = articleId
+			this.author = author
 			this.getArticleDetailsRequest(author, articleId)
 		},
 		methods: {
+			...mapActions('user', ['checkLogin']),
 			// 获取文章详情数据
 			getArticleDetailsRequest(author, articleId) {
 				uni.showLoading({
@@ -100,6 +115,54 @@
 					.replace(/<summary>/gi, '<summary class="summary-cls">')
 					.replace(/<blockquote>/gi, '<blockquote class="blockquote-cls">')
 					.replace(/<img/gi, '<img class="img-cls"');
+			},
+			// 关注按钮事件
+			async followHandler() {
+				const isLogin = await this.checkLogin()
+				if (!isLogin) return
+				this.followLoading = true
+				await follow({
+					author: this.author,
+					isFollow: !this.articleData.isFollow
+				})
+				this.articleData.isFollow = !this.articleData.isFollow
+				this.followLoading = false
+			},
+			// 点击评论框回调事件
+			onComment() {
+				this.$refs.popup.open()
+			},
+			// 评论弹出层改变事件
+			popChangeHandler(e) {
+				if (e.show) {
+					this.showPopUp = e.show
+				} else {
+					setTimeout(() => {
+						this.showPopUp = e.show
+					}, 200)
+				}
+			},
+			// 发表评论回调事件
+			onSendHandler(data) {
+				this.$refs.popup.close()
+				this.showPopUp = false
+				this.$refs.mescrollItem.addComment(data)
+			},
+			// 点赞事件
+			async onPraise() {
+				await praise({
+					articleId: this.articleId,
+					isPraise: !this.articleData.isPraise
+				})
+				this.articleData.isPraise = !this.articleData.isPraise
+			},
+			// 收藏事件
+			async onCollect() {
+				await collect({
+					articleId: this.articleId,
+					isCollect: !this.articleData.isCollect
+				})
+				this.articleData.isCollect = !this.articleData.isCollect
 			}
 		}
 	}

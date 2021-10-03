@@ -38,9 +38,7 @@
 }
 .uni-popup .uni-popup__wrapper.left.data-v-7c43d41b, .uni-popup .uni-popup__wrapper.right.data-v-7c43d41b {
   padding-top: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .fixforpc-z-index.data-v-7c43d41b {
   z-index: 999;

@@ -1,28 +1,54 @@
 <template>
 	<view class="comment-bottom-main">
-		<view class="comment-btn">
-			<Search placeHolder="评论一句,前排打call..." :config="{height: '28px', border: 'none', icon: '/static/images/input-icon.png', backgroundColor: '#eeedf4'}"/>
+		<view class="comment-btn" @click="commentHadnler">
+			<Search placeHolder="评论一句,前排打call..." :config="{ height: '28px', border: 'none', icon: '/static/images/input-icon.png', backgroundColor: '#eeedf4' }"/>
 		</view>
 		<!-- 点赞 -->
-		<view class="praise">
-			<image class="praise-img" src="/static/images/un-praise.png"></image>
+		<view class="praise" @click="praiseHandler">
+			<image class="praise-img" :src="articleData.isPraise ? '/static/images/praise.png' : '/static/images/un-praise.png'"></image>
 			<text class="praise-text">点赞</text>
 		</view>
 		<!-- 收藏 -->
-		<view class="collect">
-			<image class="collect-img" src="/static/images/un-collect.png"></image>
+		<view class="collect" @click="collectHandler">
+			<image class="collect-img" :src="articleData.isCollect ? '/static/images/collect.png' : '/static/images/un-collect.png'"></image>
 			<text class="collect-text">收藏</text>
 		</view>
 	</view>
 </template>
 
 <script>
+	import { mapActions } from 'vuex'
 	export default {
 		name:"CommentBottom",
-		data() {
-			return {
-				
-			};
+		props: {
+			// 文章数据
+			articleData: {
+				type: Object,
+				default: () => {
+					return {}
+				}
+			}
+		},
+		methods: {
+			...mapActions('user', ['checkLogin']),
+			// 点击评论事件
+			async commentHadnler() {
+				const isLogin = await this.checkLogin()
+				if (!isLogin) return
+				this.$emit('onComment')
+			},
+			// 点赞事件
+			async praiseHandler() {
+				const isLogin = await this.checkLogin()
+				if (!isLogin) return
+				this.$emit('onPraise')
+			},
+			// 收藏事件
+			async collectHandler() {
+				const isLogin = await this.checkLogin()
+				if (!isLogin) return
+				this.$emit('onCollect')
+			}
 		}
 	}
 </script>

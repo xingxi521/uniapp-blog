@@ -1,1 +1,1 @@
-<view></view>
+<view><login vue-id="704e9d00-1" bind:__l="__l"></login></view>

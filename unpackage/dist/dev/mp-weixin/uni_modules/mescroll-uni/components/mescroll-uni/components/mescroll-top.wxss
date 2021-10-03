@@ -58,7 +58,6 @@
 	height: auto;
 	border-radius: 50%;
 	opacity: 0;
-	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s; /* 过渡 */
 	margin-bottom: 0px; /* css变量 */
 }

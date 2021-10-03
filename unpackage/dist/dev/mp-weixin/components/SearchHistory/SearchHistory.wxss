@@ -28,12 +28,8 @@
   padding: 12px;
 }
 .history-main .history-title-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 21px;
 }
 .history-main .history-title-box .head-title {
@@ -55,8 +51,6 @@
   position: relative;
 }
 .history-main .history-list-box .list-item {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .history-main .history-list-box .list-item .list-text {

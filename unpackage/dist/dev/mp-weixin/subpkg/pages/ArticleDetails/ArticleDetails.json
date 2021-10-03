@@ -4,6 +4,8 @@
   "usingComponents": {
     "mp-html": "/uni_modules/mp-html/components/mp-html/mp-html",
     "comment-list": "/components/CommentList/CommentList",
-    "comment-bottom": "/components/CommentBottom/CommentBottom"
+    "comment-bottom": "/components/CommentBottom/CommentBottom",
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "comment-pop-up": "/components/CommentPopUp/CommentPopUp"
   }
 }

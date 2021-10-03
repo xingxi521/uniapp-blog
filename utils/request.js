@@ -1,8 +1,12 @@
 const BASE_URL = 'https://api.imooc-blog.lgdsunday.club/api'
+import store from '../store/index.js'
 function request({ url, method, data }) {
 	return new Promise((resolve, reject) => {
 		uni.request({
 			url: BASE_URL + url,
+			header: {
+				Authorization: store.state.user.token
+			},
 			method,
 			data,
 			success: ({ data }) => {

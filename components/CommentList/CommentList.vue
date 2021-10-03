@@ -101,6 +101,10 @@
 					this.mescroll = this.$refs.mescrollRef.mescroll;
 				}
 				return this.mescroll;
+			},
+			// 增加一条评论数据
+			addComment(data) {
+				this.commentData.unshift(data)
 			}
 		}
 	}

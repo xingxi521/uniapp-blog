@@ -33,12 +33,8 @@
   box-shadow: 2px 2px 5px 1px rgba(143, 143, 143, 0.1);
 }
 .search-list-container .item-list {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   padding: 12px 12px 12px 0;
 }
 .search-list-container .item-list .item-list-title {

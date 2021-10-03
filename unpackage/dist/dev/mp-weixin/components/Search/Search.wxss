@@ -25,23 +25,15 @@
 /* 透明度 */
 /* 文章场景相关 */
 .search-main {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   background-color: #ffffff;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
 }
 .search-main .search_box {
   width: 100%;
   height: 36px;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   border-radius: 15px;
   border: 1px solid #c9c9c9;
   padding: 0 10px;

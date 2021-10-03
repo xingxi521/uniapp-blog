@@ -28,8 +28,6 @@
   margin-bottom: 12px;
 }
 .list-container .list-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   border-radius: 6px;
   background-color: #ffffff;
@@ -54,15 +52,9 @@
   color: #333;
 }
 .list-container .list-box .list-box-right .right-bottom-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 4px;
 }
 .list-container .list-box .list-box-right .right-bottom-box .bottom-author {

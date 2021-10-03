@@ -651,20 +651,12 @@ page page.night-body .img-cls.mathcode {
   color: #333;
 }
 .details-main .info-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 8px 0;
 }
 .details-main .info-box .info-box-left .author-box {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
 }
 .details-main .info-box .info-box-left .author-box .author-container {

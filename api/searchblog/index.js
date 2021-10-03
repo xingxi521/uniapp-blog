@@ -21,3 +21,39 @@ export function getSearchResultList(data) {
 		data
 	})
 }
+
+// 关注接口
+export function follow(data) {
+	return request({
+		url: '/user/follow',
+		method: 'get',
+		data
+	})
+}
+
+// 发表评论
+export function comment(data) {
+	return request({
+		url: '/user/article/comment',
+		method: 'post',
+		data
+	})
+}
+
+// 点赞
+export function praise(data) {
+	return request({
+		url: '/user/praise',
+		method: 'get',
+		data
+	})
+}
+
+// 收藏
+export function collect(data) {
+	return request({
+		url: '/user/collect',
+		method: 'get',
+		data
+	})
+}

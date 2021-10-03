@@ -25,19 +25,12 @@
 /* 透明度 */
 /* 文章场景相关 */
 .comment-item-main.data-v-9eb73d2c {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
   padding: 12px 0;
 }
 .comment-item-main .item-right.data-v-9eb73d2c {
-  display: -webkit-box;
-  display: -webkit-flex;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-left: 5px;
 }
 .comment-item-main .item-right .item-name.data-v-9eb73d2c {
