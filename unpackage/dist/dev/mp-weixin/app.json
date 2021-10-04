@@ -10,7 +10,8 @@
       "pages": [
         "pages/SearchBlog/SearchBlog",
         "pages/ArticleDetails/ArticleDetails",
-        "pages/MyLogin/MyLogin"
+        "pages/MyLogin/MyLogin",
+        "pages/VideoDetails/VideoDetails"
       ],
       "name": "sub-1"
     }

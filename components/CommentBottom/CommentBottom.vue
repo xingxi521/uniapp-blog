@@ -1,7 +1,7 @@
 <template>
 	<view class="comment-bottom-main">
 		<view class="comment-btn" @click="commentHadnler">
-			<Search placeHolder="评论一句,前排打call..." :config="{ height: '28px', border: 'none', icon: '/static/images/input-icon.png', backgroundColor: '#eeedf4' }"/>
+			<Search :placeHolder="placeHolder" :config="{ height: '28px', border: 'none', icon: '/static/images/input-icon.png', backgroundColor: '#eeedf4' }"/>
 		</view>
 		<!-- 点赞 -->
 		<view class="praise" @click="praiseHandler">
@@ -27,6 +27,11 @@
 				default: () => {
 					return {}
 				}
+			},
+			// 提示
+			placeHolder: {
+				type: String,
+				default: '评论一句,前排打call...'
 			}
 		},
 		methods: {

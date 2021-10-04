@@ -1,5 +1,7 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "热播",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "video-list": "/components/VideoList/VideoList"
+  }
 }

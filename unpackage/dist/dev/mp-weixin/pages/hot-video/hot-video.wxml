@@ -1,1 +1,1 @@
-<view></view>
+<view class="hot-video-main"><video-list class="vue-ref" vue-id="dbd43370-1" data-ref="mescrollItem" bind:__l="__l"></video-list></view>

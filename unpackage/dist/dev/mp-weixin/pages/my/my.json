@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "我的",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "login": "/components/Login/Login"

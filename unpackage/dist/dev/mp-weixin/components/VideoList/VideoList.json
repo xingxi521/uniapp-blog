@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mescroll-body": "/uni_modules/mescroll-uni/components/mescroll-body/mescroll-body",
+    "video-list-item": "/components/VideoListItem/VideoListItem"
+  },
+  "component": true
+}

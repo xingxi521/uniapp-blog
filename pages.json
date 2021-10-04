@@ -2,21 +2,21 @@
 	"pages": [{
 			"path": "pages/hot/hot",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "首页",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/hot-video/hot-video",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "热播",
 				"enablePullDownRefresh": false
 			}
 		},
 		{
 			"path": "pages/my/my",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "我的",
 				"enablePullDownRefresh": false
 			}
 		}
@@ -72,6 +72,13 @@
 				"path": "pages/MyLogin/MyLogin",
 				"style": {
 					"navigationBarTitleText": "登录",
+					"enablePullDownRefresh": false
+				}
+
+			}, {
+				"path": "pages/VideoDetails/VideoDetails",
+				"style": {
+					"navigationBarTitleText": "热播详情",
 					"enablePullDownRefresh": false
 				}
 

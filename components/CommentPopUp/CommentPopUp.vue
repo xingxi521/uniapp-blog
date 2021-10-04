@@ -1,5 +1,5 @@
 <template>
-	<view class="popup-main" :style="{ bottom: bottom + 'px;' }">
+	<view class="popup-main" :style="{ bottom: bottom + 'px' }">
 		<uni-easyinput v-model="value" placeholder="说点什么..." :disable="!value" type="textarea" :inputBorder="false"></uni-easyinput>
 		<view class="popup-btn">
 			<button type="primary" size="mini" @click="sendHandler">发送</button>
@@ -22,11 +22,12 @@
 			return {
 				value: '',
 				// 弹出层的位置
-				bottom: 0
+				bottom: 0,
 			};
 		},
 		created() {
 			uni.onKeyboardHeightChange(({ height }) => {
+				console.log(height)
 				this.bottom = height
 			})
 		},

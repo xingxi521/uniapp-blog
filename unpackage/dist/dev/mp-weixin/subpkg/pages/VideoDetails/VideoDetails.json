@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "热播详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "video-item-info": "/components/VideoItemInfo/VideoItemInfo",
+    "video-danmu-list": "/components/VideoDanmuList/VideoDanmuList",
+    "comment-bottom": "/components/CommentBottom/CommentBottom",
+    "uni-popup": "/uni_modules/uni-popup/components/uni-popup/uni-popup",
+    "comment-pop-up": "/components/CommentPopUp/CommentPopUp"
+  }
+}

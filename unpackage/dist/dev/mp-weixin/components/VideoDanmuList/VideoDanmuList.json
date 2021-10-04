@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "uni-load-more": "/uni_modules/uni-load-more/components/uni-load-more/uni-load-more",
+    "empty-data": "/components/EmptyData/EmptyData",
+    "comment-item": "/components/CommentItem/CommentItem"
+  },
+  "component": true
+}
