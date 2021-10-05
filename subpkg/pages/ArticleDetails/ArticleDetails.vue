@@ -1,5 +1,7 @@
 <template>
+	<!-- #ifndef H5 -->
 	<page-meta root-font-size="52px">
+	<!-- #endif -->
 		<view class="details-main">
 			<!-- 标题 -->
 			<view class="details-title">{{ articleData.articleTitles }}</view>
@@ -35,7 +37,9 @@
 				<CommentPopUp v-if="showPopUp" :articleId="articleId" @onSend="onSendHandler"/>
 			</uni-popup>
 		</view>
+	#<!-- #ifndef H5 -->
 	</page-meta>
+	<!-- #endif -->
 </template>
 
 <script>
@@ -169,7 +173,6 @@
 </script>
 
 <style lang="scss">
-	@import '~@/style/article-details.scss';
 	.details-main{
 		padding: $uni-spacing-col-base $uni-spacing-row-base;
 		padding-bottom: 108px;

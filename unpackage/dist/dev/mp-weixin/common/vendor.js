@@ -914,7 +914,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -2151,44 +2151,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 111:
-/*!**********************************************!*\
-  !*** E:/前段资料/uniapp-blog/api/video/video.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getVideoList = getVideoList;exports.getDanmuAllList = getDanmuAllList;exports.getDanmuList = getDanmuList;var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-// 获取热播列表数据
-function getVideoList() {
-  return (0, _request.default)({
-    url: '/video/list',
-    method: 'get' });
-
-}
-
-// 获取弹幕所有数据
-function getDanmuAllList(data) {
-  return (0, _request.default)({
-    url: '/video/danmu',
-    method: 'get',
-    data: data });
-
-}
-
-// 获取弹幕列表分页数据
-function getDanmuList(data) {
-  return (0, _request.default)({
-    url: '/video/comment/list',
-    method: 'get',
-    data: data });
-
-}
-
-/***/ }),
-
-/***/ 112:
+/***/ 115:
 /*!***********************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/mescroll-mixins.js ***!
   \***********************************************************************************************/
@@ -2309,7 +2272,7 @@ function timeFomatter(val) {
 
 /***/ }),
 
-/***/ 146:
+/***/ 149:
 /*!****************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mp-html/components/mp-html/parser.js ***!
   \****************************************************************************/
@@ -4821,148 +4784,6 @@ module.exports = index_cjs;
 
 /***/ }),
 
-/***/ 189:
-/*!*******************************************************************************!*\
-  !*** E:/前段资料/uniapp-blog/uni_modules/uni-icons/components/uni-icons/icons.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  "pulldown": "\uE588",
-  "refreshempty": "\uE461",
-  "back": "\uE471",
-  "forward": "\uE470",
-  "more": "\uE507",
-  "more-filled": "\uE537",
-  "scan": "\uE612",
-  "qq": "\uE264",
-  "weibo": "\uE260",
-  "weixin": "\uE261",
-  "pengyouquan": "\uE262",
-  "loop": "\uE565",
-  "refresh": "\uE407",
-  "refresh-filled": "\uE437",
-  "arrowthindown": "\uE585",
-  "arrowthinleft": "\uE586",
-  "arrowthinright": "\uE587",
-  "arrowthinup": "\uE584",
-  "undo-filled": "\uE7D6",
-  "undo": "\uE406",
-  "redo": "\uE405",
-  "redo-filled": "\uE7D9",
-  "bars": "\uE563",
-  "chatboxes": "\uE203",
-  "camera": "\uE301",
-  "chatboxes-filled": "\uE233",
-  "camera-filled": "\uE7EF",
-  "cart-filled": "\uE7F4",
-  "cart": "\uE7F5",
-  "checkbox-filled": "\uE442",
-  "checkbox": "\uE7FA",
-  "arrowleft": "\uE582",
-  "arrowdown": "\uE581",
-  "arrowright": "\uE583",
-  "smallcircle-filled": "\uE801",
-  "arrowup": "\uE580",
-  "circle": "\uE411",
-  "eye-filled": "\uE568",
-  "eye-slash-filled": "\uE822",
-  "eye-slash": "\uE823",
-  "eye": "\uE824",
-  "flag-filled": "\uE825",
-  "flag": "\uE508",
-  "gear-filled": "\uE532",
-  "reload": "\uE462",
-  "gear": "\uE502",
-  "hand-thumbsdown-filled": "\uE83B",
-  "hand-thumbsdown": "\uE83C",
-  "hand-thumbsup-filled": "\uE83D",
-  "heart-filled": "\uE83E",
-  "hand-thumbsup": "\uE83F",
-  "heart": "\uE840",
-  "home": "\uE500",
-  "info": "\uE504",
-  "home-filled": "\uE530",
-  "info-filled": "\uE534",
-  "circle-filled": "\uE441",
-  "chat-filled": "\uE847",
-  "chat": "\uE263",
-  "mail-open-filled": "\uE84D",
-  "email-filled": "\uE231",
-  "mail-open": "\uE84E",
-  "email": "\uE201",
-  "checkmarkempty": "\uE472",
-  "list": "\uE562",
-  "locked-filled": "\uE856",
-  "locked": "\uE506",
-  "map-filled": "\uE85C",
-  "map-pin": "\uE85E",
-  "map-pin-ellipse": "\uE864",
-  "map": "\uE364",
-  "minus-filled": "\uE440",
-  "mic-filled": "\uE332",
-  "minus": "\uE410",
-  "micoff": "\uE360",
-  "mic": "\uE302",
-  "clear": "\uE434",
-  "smallcircle": "\uE868",
-  "close": "\uE404",
-  "closeempty": "\uE460",
-  "paperclip": "\uE567",
-  "paperplane": "\uE503",
-  "paperplane-filled": "\uE86E",
-  "person-filled": "\uE131",
-  "contact-filled": "\uE130",
-  "person": "\uE101",
-  "contact": "\uE100",
-  "images-filled": "\uE87A",
-  "phone": "\uE200",
-  "images": "\uE87B",
-  "image": "\uE363",
-  "image-filled": "\uE877",
-  "location-filled": "\uE333",
-  "location": "\uE303",
-  "plus-filled": "\uE439",
-  "plus": "\uE409",
-  "plusempty": "\uE468",
-  "help-filled": "\uE535",
-  "help": "\uE505",
-  "navigate-filled": "\uE884",
-  "navigate": "\uE501",
-  "mic-slash-filled": "\uE892",
-  "search": "\uE466",
-  "settings": "\uE560",
-  "sound": "\uE590",
-  "sound-filled": "\uE8A1",
-  "spinner-cycle": "\uE465",
-  "download-filled": "\uE8A4",
-  "personadd-filled": "\uE132",
-  "videocam-filled": "\uE8AF",
-  "personadd": "\uE102",
-  "upload": "\uE402",
-  "upload-filled": "\uE8B1",
-  "starhalf": "\uE463",
-  "star-filled": "\uE438",
-  "star": "\uE408",
-  "trash": "\uE401",
-  "phone-filled": "\uE230",
-  "compose": "\uE400",
-  "videocam": "\uE300",
-  "trash-filled": "\uE8DC",
-  "download": "\uE403",
-  "chatbubble-filled": "\uE232",
-  "chatbubble": "\uE202",
-  "cloud-download": "\uE8E4",
-  "cloud-upload-filled": "\uE8E5",
-  "cloud-upload": "\uE8E6",
-  "cloud-download-filled": "\uE8E9",
-  "headphones": "\uE8BF",
-  "shop": "\uE609" };exports.default = _default;
-
-/***/ }),
-
 /***/ 19:
 /*!***************************************************!*\
   !*** E:/前段资料/uniapp-blog/store/modules/search.js ***!
@@ -5009,64 +4830,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       this.commit('search/saveStorage');
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 197:
-/*!*********************************************************************!*\
-  !*** E:/前段资料/uniapp-blog/static/images sync ^\.\/ranking\-.*\.png$ ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./ranking-1.png": 198,
-	"./ranking-2.png": 199,
-	"./ranking-3.png": 200,
-	"./ranking-other.png": 201
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 197;
-
-/***/ }),
-
-/***/ 198:
-/*!*******************************************************!*\
-  !*** E:/前段资料/uniapp-blog/static/images/ranking-1.png ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAwUlEQVQ4T2NkoBJgBJnzMyiugek/oz2pZv5j/H+Qfd2iBpA+sEH/QxO1/vz5N5WBkcGBaMP+MxxgYWHKZlw9/xrcIBDjd2D8flINYl2/0BFmMdhFowahxsN/hgOjYUQgaY6GESiAnv5n+N/J+I/pMgMjgxcD4/9SlFAjJowYGRhn/v79t5Nz8+L78LwYFG/H8J+hgoGRwRMshtOgoIQdDAz/uRn//+9kWb9oC644+xUUl8XEwFjOwMCwg2XdwnSYOgCbsYQTv+rcCgAAAABJRU5ErkJggg=="
-
-/***/ }),
-
-/***/ 199:
-/*!*******************************************************!*\
-  !*** E:/前段资料/uniapp-blog/static/images/ranking-2.png ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAwElEQVQ4T+2SPQrCcAzFX/wWb+Id2uqoxxBqQWfRsWsP4FAVT+HgprbeQHB18hC29P+klQoKxRYcmymE5JfwXgR/Cok5D1e3pUKjKJNKTk3Ls+O5BMSt1g0jLAHp5YfxWK9iKiP/+gbFSbDWDkVBDdPvp4uTi0rQlw88lhr9es1SIwJ3kg6FlxqqQ4KzT9XyaES4kcBpm94tHQ43uq4UFiIYvGoZoHCt7ynsKEWnNT7vsjwLVsYEwjmAfcP0rLTvCeyKihMbFdy9AAAAAElFTkSuQmCC"
 
 /***/ }),
 
@@ -10597,7 +10360,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -10618,14 +10381,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -10711,7 +10474,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_NAME":"uniapp-blog","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -11213,7 +10976,218 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 200:
+/***/ 206:
+/*!*******************************************************************************!*\
+  !*** E:/前段资料/uniapp-blog/uni_modules/uni-icons/components/uni-icons/icons.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
+
+/***/ }),
+
+/***/ 21:
+/*!**********************************************************!*\
+  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! regenerator-runtime */ 22);
+
+/***/ }),
+
+/***/ 214:
+/*!*********************************************************************!*\
+  !*** E:/前段资料/uniapp-blog/static/images sync ^\.\/ranking\-.*\.png$ ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./ranking-1.png": 215,
+	"./ranking-2.png": 216,
+	"./ranking-3.png": 217,
+	"./ranking-other.png": 218
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 214;
+
+/***/ }),
+
+/***/ 215:
+/*!*******************************************************!*\
+  !*** E:/前段资料/uniapp-blog/static/images/ranking-1.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAwUlEQVQ4T2NkoBJgBJnzMyiugek/oz2pZv5j/H+Qfd2iBpA+sEH/QxO1/vz5N5WBkcGBaMP+MxxgYWHKZlw9/xrcIBDjd2D8flINYl2/0BFmMdhFowahxsN/hgOjYUQgaY6GESiAnv5n+N/J+I/pMgMjgxcD4/9SlFAjJowYGRhn/v79t5Nz8+L78LwYFG/H8J+hgoGRwRMshtOgoIQdDAz/uRn//+9kWb9oC644+xUUl8XEwFjOwMCwg2XdwnSYOgCbsYQTv+rcCgAAAABJRU5ErkJggg=="
+
+/***/ }),
+
+/***/ 216:
+/*!*******************************************************!*\
+  !*** E:/前段资料/uniapp-blog/static/images/ranking-2.png ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAwElEQVQ4T+2SPQrCcAzFX/wWb+Id2uqoxxBqQWfRsWsP4FAVT+HgprbeQHB18hC29P+klQoKxRYcmymE5JfwXgR/Cok5D1e3pUKjKJNKTk3Ls+O5BMSt1g0jLAHp5YfxWK9iKiP/+gbFSbDWDkVBDdPvp4uTi0rQlw88lhr9es1SIwJ3kg6FlxqqQ4KzT9XyaES4kcBpm94tHQ43uq4UFiIYvGoZoHCt7ynsKEWnNT7vsjwLVsYEwjmAfcP0rLTvCeyKihMbFdy9AAAAAElFTkSuQmCC"
+
+/***/ }),
+
+/***/ 217:
 /*!*******************************************************!*\
   !*** E:/前段资料/uniapp-blog/static/images/ranking-3.png ***!
   \*******************************************************/
@@ -11224,7 +11198,7 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABW
 
 /***/ }),
 
-/***/ 201:
+/***/ 218:
 /*!***********************************************************!*\
   !*** E:/前段资料/uniapp-blog/static/images/ranking-other.png ***!
   \***********************************************************/
@@ -11235,7 +11209,55 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABW
 
 /***/ }),
 
-/***/ 209:
+/***/ 22:
+/*!************************************************************!*\
+  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2014-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// This method of obtaining a reference to the global object needs to be
+// kept identical to the way it is obtained in runtime.js
+var g = (function() {
+  return this || (typeof self === "object" && self);
+})() || Function("return this")();
+
+// Use `getOwnPropertyNames` because not all browsers support calling
+// `hasOwnProperty` on the global `self` object in a worker. See #183.
+var hadRuntime = g.regeneratorRuntime &&
+  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
+
+// Save the old regeneratorRuntime in case it needs to be restored later.
+var oldRuntime = hadRuntime && g.regeneratorRuntime;
+
+// Force reevalutation of runtime.js.
+g.regeneratorRuntime = undefined;
+
+module.exports = __webpack_require__(/*! ./runtime */ 23);
+
+if (hadRuntime) {
+  // Restore the original runtime.
+  g.regeneratorRuntime = oldRuntime;
+} else {
+  // Remove the global property added by runtime.js.
+  try {
+    delete g.regeneratorRuntime;
+  } catch(e) {
+    g.regeneratorRuntime = undefined;
+  }
+}
+
+
+/***/ }),
+
+/***/ 226:
 /*!********************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/mescroll-uni.js ***!
   \********************************************************************************************/
@@ -12046,18 +12068,7 @@ MeScroll.prototype.preventDefault = function (e) {
 
 /***/ }),
 
-/***/ 21:
-/*!**********************************************************!*\
-  !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! regenerator-runtime */ 22);
-
-/***/ }),
-
-/***/ 210:
+/***/ 227:
 /*!***************************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/mescroll-uni-option.js ***!
   \***************************************************************************************************/
@@ -12132,7 +12143,7 @@ GlobalOption;exports.default = _default;
 
 /***/ }),
 
-/***/ 211:
+/***/ 228:
 /*!*********************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/mescroll-i18n.js ***!
   \*********************************************************************************************/
@@ -12159,7 +12170,7 @@ mescrollI18n;exports.default = _default;
 
 /***/ }),
 
-/***/ 212:
+/***/ 229:
 /*!******************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/wxs/mixins.js ***!
   \******************************************************************************************/
@@ -12276,89 +12287,6 @@ var WxsMixin = {
 
 
 WxsMixin;exports.default = _default;
-
-/***/ }),
-
-/***/ 22:
-/*!************************************************************!*\
-  !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/**
- * Copyright (c) 2014-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-// This method of obtaining a reference to the global object needs to be
-// kept identical to the way it is obtained in runtime.js
-var g = (function() {
-  return this || (typeof self === "object" && self);
-})() || Function("return this")();
-
-// Use `getOwnPropertyNames` because not all browsers support calling
-// `hasOwnProperty` on the global `self` object in a worker. See #183.
-var hadRuntime = g.regeneratorRuntime &&
-  Object.getOwnPropertyNames(g).indexOf("regeneratorRuntime") >= 0;
-
-// Save the old regeneratorRuntime in case it needs to be restored later.
-var oldRuntime = hadRuntime && g.regeneratorRuntime;
-
-// Force reevalutation of runtime.js.
-g.regeneratorRuntime = undefined;
-
-module.exports = __webpack_require__(/*! ./runtime */ 23);
-
-if (hadRuntime) {
-  // Restore the original runtime.
-  g.regeneratorRuntime = oldRuntime;
-} else {
-  // Remove the global property added by runtime.js.
-  try {
-    delete g.regeneratorRuntime;
-  } catch(e) {
-    g.regeneratorRuntime = undefined;
-  }
-}
-
-
-/***/ }),
-
-/***/ 229:
-/*!*******************************************************************************!*\
-  !*** E:/前段资料/uniapp-blog/uni_modules/uni-popup/components/uni-popup/popup.js ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
-{
-  data: function data() {
-    return {};
-
-
-  },
-  created: function created() {
-    this.popup = this.getParent();
-  },
-  methods: {
-    /**
-              * 获取父元素实例
-              */
-    getParent: function getParent() {var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'uniPopup';
-      var parent = this.$parent;
-      var parentName = parent.$options.name;
-      while (parentName !== name) {
-        parent = parent.$parent;
-        if (!parent) return false;
-        parentName = parent.$options.name;
-      }
-      return parent;
-    } } };exports.default = _default;
 
 /***/ }),
 
@@ -13115,6 +13043,41 @@ function login(data) {
 
 /***/ }),
 
+/***/ 246:
+/*!*******************************************************************************!*\
+  !*** E:/前段资料/uniapp-blog/uni_modules/uni-popup/components/uni-popup/popup.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+{
+  data: function data() {
+    return {};
+
+
+  },
+  created: function created() {
+    this.popup = this.getParent();
+  },
+  methods: {
+    /**
+              * 获取父元素实例
+              */
+    getParent: function getParent() {var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'uniPopup';
+      var parent = this.$parent;
+      var parentName = parent.$options.name;
+      while (parentName !== name) {
+        parent = parent.$parent;
+        if (!parent) return false;
+        parentName = parent.$options.name;
+      }
+      return parent;
+    } } };exports.default = _default;
+
+/***/ }),
+
 /***/ 25:
 /*!********************************************!*\
   !*** E:/前段资料/uniapp-blog/utils/request.js ***!
@@ -13184,7 +13147,20 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 267:
+/***/ 27:
+/*!******************************************************!*\
+  !*** E:/前段资料/uniapp-blog/style/article-details.scss ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+    if(false) { var cssReload; }
+  
+
+/***/ }),
+
+/***/ 284:
 /*!***************************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/uni-transition/components/uni-transition/createAnimation.js ***!
   \***************************************************************************************************/
@@ -13355,7 +13331,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /*!********************************************!*\
   !*** E:/前段资料/uniapp-blog/api/hot/index.js ***!
   \********************************************/
@@ -13832,7 +13808,7 @@ function walkJsonObj(jsonObj, walk) {
 
 /***/ }),
 
-/***/ 42:
+/***/ 43:
 /*!****************************************************************************************************!*\
   !*** E:/前段资料/uniapp-blog/uni_modules/mescroll-uni/components/mescroll-uni/mixins/mescroll-comp.js ***!
   \****************************************************************************************************/
@@ -13901,7 +13877,7 @@ MescrollCompMixin;exports.default = _default;
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /*!***************************************************!*\
   !*** E:/前段资料/uniapp-blog/api/searchblog/index.js ***!
   \***************************************************/
@@ -13971,7 +13947,7 @@ function collect(data) {
 
 /***/ }),
 
-/***/ 56:
+/***/ 57:
 /*!*****************************************************!*\
   !*** E:/前段资料/uniapp-blog/utils/const/searchblog.js ***!
   \*****************************************************/
@@ -13979,7 +13955,7 @@ function collect(data) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.SEARCH_STATUS = void 0;var _tools = __webpack_require__(/*! @/utils/tools.js */ 57);
+Object.defineProperty(exports, "__esModule", { value: true });exports.SEARCH_STATUS = void 0;var _tools = __webpack_require__(/*! @/utils/tools.js */ 58);
 // 搜索列表展示 枚举
 var SEARCH_STATUS = (0, _tools.createEnum)({
   SEARCH_LIST: [1, '搜索列表'],
@@ -13988,7 +13964,7 @@ var SEARCH_STATUS = (0, _tools.createEnum)({
 
 /***/ }),
 
-/***/ 57:
+/***/ 58:
 /*!******************************************!*\
   !*** E:/前段资料/uniapp-blog/utils/tools.js ***!
   \******************************************/
@@ -14028,6 +14004,43 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.createEnum
       });
       return result || [];
     } });
+
+}
+
+/***/ }),
+
+/***/ 79:
+/*!**********************************************!*\
+  !*** E:/前段资料/uniapp-blog/api/video/video.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getVideoList = getVideoList;exports.getDanmuAllList = getDanmuAllList;exports.getDanmuList = getDanmuList;var _request = _interopRequireDefault(__webpack_require__(/*! ../../utils/request.js */ 25));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+// 获取热播列表数据
+function getVideoList() {
+  return (0, _request.default)({
+    url: '/video/list',
+    method: 'get' });
+
+}
+
+// 获取弹幕所有数据
+function getDanmuAllList(data) {
+  return (0, _request.default)({
+    url: '/video/danmu',
+    method: 'get',
+    data: data });
+
+}
+
+// 获取弹幕列表分页数据
+function getDanmuList(data) {
+  return (0, _request.default)({
+    url: '/video/comment/list',
+    method: 'get',
+    data: data });
 
 }
 

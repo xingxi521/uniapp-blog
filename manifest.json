@@ -55,5 +55,8 @@
             "checkSiteMap" : false
         },
         "usingComponents" : true
+    },
+    "h5" : {
+        "template" : "index.html"
     }
 }

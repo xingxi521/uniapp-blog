@@ -6,7 +6,12 @@
 			<view class="login-desc">
 				登录后可同步数据
 			</view>
-			<button type="primary" class="login-btn" @click="loginHandler">一键登录</button>
+			<!-- #ifdef MP-WEIXIN -->
+			<button type="primary" class="login-btn" @click="loginHandler">微信一键登录</button>
+			<!-- #endif -->
+			<!-- #ifndef MP-WEIXIN -->
+			<button type="primary" class="login-btn" @click="loginHfHandler">一键登录</button>
+			<!-- #endif -->
 		</block>
 		<block v-else>
 			<image :src="userInfo.avatarUrl" class="circle-image login-img"></image>
@@ -32,7 +37,7 @@
 		},
 		methods: {
 			...mapActions('user', ['login', 'logout']),
-			// 登录按钮事件
+			// 微信登录按钮事件
 			loginHandler() {
 				uni.showLoading({
 					title: '数据正在加载中...',
@@ -41,6 +46,7 @@
 				uni.getUserProfile({
 					desc: '登录成功后可同步数据',
 					success: (obj) => {
+						console.log(obj)
 						this.login(obj)
 						this.$emit('onBack')
 					},
@@ -54,6 +60,23 @@
 						uni.hideLoading()
 					}
 				})
+			},
+			async loginHfHandler() {
+				uni.showLoading({
+					title: '数据正在加载中...',
+					mask: true
+				})
+				await this.login({
+					encryptedData: 'BmGEMqpGI5w',
+					errMsg: 'getUserProfile:ok',
+					iv: 'c+NbINO4CuEWCBYGG2FxWw==',
+					rawData:
+						'{"nickName":"CorderX","gender":1,"language":"zh_CN","city":"","province":"","country":"China","avatarUrl":"https://thirdwx.qlogo.cn/mmopen/vi_32/Mb6hMmpR9Oia0sMJhvRM7FQo4wvpcibx8TriajWYgCqRhHwYaT4lakbMpA0a21TjBf3Bpib4vYCoDoMK2e5UHxzmLA/132"}',
+					signature: '449a10f11998daf680fe546a5176e6e2973516ce',
+					userInfo: { nickName: 'CorderX', gender: 1, language: 'zh_CN', city: '', province: '',"avatarUrl":"https://thirdwx.qlogo.cn/mmopen/vi_32/Mb6hMmpR9Oia0sMJhvRM7FQo4wvpcibx8TriajWYgCqRhHwYaT4lakbMpA0a21TjBf3Bpib4vYCoDoMK2e5UHxzmLA/132" }
+				})
+				this.$emit('onBack')
+				uni.hideLoading()
 			},
 			// 退出登录
 			logoutHandler() {
